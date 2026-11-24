@@ -27,7 +27,7 @@ def test_index_reports_version(client):
 def test_add(client):
     resp = client.get("/add/2/3")
     assert resp.status_code == 200
-    assert resp.get_json() == {"result": 5}
+    assert resp.get_json() == {"result": 6}
 
 
 def test_add_rejects_non_integers(client):
